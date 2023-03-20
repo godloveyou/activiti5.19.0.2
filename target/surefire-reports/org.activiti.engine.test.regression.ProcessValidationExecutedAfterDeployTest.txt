@@ -1,0 +1,272 @@
+-------------------------------------------------------------------------------
+Test set: org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec <<< FAILURE!
+testGetStartFormData(org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.VERSION_ = (SELECT MAX(VERSION_) FROM ACT_RE_PROCDEF WHERE KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           AND ( (TENANT_ID_ IS NOT NULL AND TENANT_ID_ = RES.TENANT_ID_) OR (TENANT_ID_ IS NULL AND RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     ORDER BY  ORDER[*] BY RES.VERSION_ DESC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     order by  order by RES.VERSION_ desc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/ProcessDefinition.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*              from ACT_RE_PROCDEF RES            WHERE  RES.KEY_ = ?                                                                 and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_                                                             and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )                    )           order by  order by RES.VERSION_ desc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.VERSION_ = (SELECT MAX(VERSION_) FROM ACT_RE_PROCDEF WHERE KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           AND ( (TENANT_ID_ IS NOT NULL AND TENANT_ID_ = RES.TENANT_ID_) OR (TENANT_ID_ IS NULL AND RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     ORDER BY  ORDER[*] BY RES.VERSION_ DESC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     order by  order by RES.VERSION_ desc  
+    LIMIT ? OFFSET ? [42001-176]
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:227)
+	at org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest.getLatestProcessDefinitionVersionByKey(ProcessValidationExecutedAfterDeployTest.java:49)
+	at org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest.testGetStartFormData(ProcessValidationExecutedAfterDeployTest.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+testGetLatestProcessDefinitionTextByKey(org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.VERSION_ = (SELECT MAX(VERSION_) FROM ACT_RE_PROCDEF WHERE KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           AND ( (TENANT_ID_ IS NOT NULL AND TENANT_ID_ = RES.TENANT_ID_) OR (TENANT_ID_ IS NULL AND RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     ORDER BY  ORDER[*] BY RES.VERSION_ DESC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     order by  order by RES.VERSION_ desc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/ProcessDefinition.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*              from ACT_RE_PROCDEF RES            WHERE  RES.KEY_ = ?                                                                 and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_                                                             and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )                    )           order by  order by RES.VERSION_ desc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.VERSION_ = (SELECT MAX(VERSION_) FROM ACT_RE_PROCDEF WHERE KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           AND ( (TENANT_ID_ IS NOT NULL AND TENANT_ID_ = RES.TENANT_ID_) OR (TENANT_ID_ IS NULL AND RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     ORDER BY  ORDER[*] BY RES.VERSION_ DESC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.KEY_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = RES.KEY_ 
+             
+	         
+	         
+	         
+	           and ( (TENANT_ID_ IS NOT NULL and TENANT_ID_ = RES.TENANT_ID_) or (TENANT_ID_ IS NULL and RES.TENANT_ID_ IS NULL) )
+	         
+        ) 
+   
+     order by  order by RES.VERSION_ desc  
+    LIMIT ? OFFSET ? [42001-176]
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:227)
+	at org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest.getLatestProcessDefinitionVersionByKey(ProcessValidationExecutedAfterDeployTest.java:49)
+	at org.activiti.engine.test.regression.ProcessValidationExecutedAfterDeployTest.testGetLatestProcessDefinitionTextByKey(ProcessValidationExecutedAfterDeployTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+

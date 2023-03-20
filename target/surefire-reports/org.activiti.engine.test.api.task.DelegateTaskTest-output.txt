@@ -1,0 +1,2367 @@
+10:45:10,813 [main] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment creates deployment for DelegateTaskTest.testGetCandidates
+10:45:10,813 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,813 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeployCmd --------------------------------------------------------
+10:45:10,813 [main] DEBUG org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing deployment DelegateTaskTest.testGetCandidates
+10:45:10,813 [main] INFO  org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing resource org/activiti/engine/test/api/task/DelegateTaskTest.testGetCandidates.bpmn20.xml
+10:45:10,818 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.ProcessParseHandler  - Parsing process DelegateTaskTest.testGetCandidates
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity task1
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity task2
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity theStart
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity theEnd
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,819 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 297240765 from pool.
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: DelegateTaskTest.testGetCandidates(String), DelegateTaskTest.testGetCandidates(String)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 0
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==>  Preparing: select J.* from ACT_RU_JOB J inner join ACT_RE_PROCDEF P on J.PROC_DEF_ID_ = P.ID_ where J.HANDLER_TYPE_ = ? and P.KEY_ = ? and (P.TENANT_ID_ = '' or P.TENANT_ID_ is null) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==> Parameters: timer-start-event(String), DelegateTaskTest.testGetCandidates(String)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - <==      Total: 0
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==>  Preparing: select * from ACT_PROCDEF_INFO where PROC_DEF_ID_ = ? 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==> Parameters: DelegateTaskTest.testGetCandidates:1:710(String)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - <==      Total: 0
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting GetProcessDefinitionInfoCmd --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'org.activiti.engine.impl.cmd.GetProcessDefinitionInfoCmd'
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting  --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'null'
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - ---  finished --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- GetProcessDefinitionInfoCmd finished --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=709, name=org/activiti/engine/test/api/task/DelegateTaskTest.testGetCandidates.bpmn20.xml]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert DeploymentEntity[id=708, name=DelegateTaskTest.testGetCandidates]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ProcessDefinitionEntity[DelegateTaskTest.testGetCandidates:1:710]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 3 insert, 0 update, 0 delete.
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: ProcessDefinitionEntity[DelegateTaskTest.testGetCandidates:1:710]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - ==>  Preparing: insert into ACT_RE_PROCDEF(ID_, REV_, CATEGORY_, NAME_, KEY_, VERSION_, DEPLOYMENT_ID_, RESOURCE_NAME_, DGRM_RESOURCE_NAME_, DESCRIPTION_, HAS_START_FORM_KEY_, HAS_GRAPHICAL_NOTATION_ , SUSPENSION_STATE_, TENANT_ID_) values (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - ==> Parameters: DelegateTaskTest.testGetCandidates:1:710(String), Examples(String), Task  Listener Example(String), DelegateTaskTest.testGetCandidates(String), 1(Integer), 708(String), org/activiti/engine/test/api/task/DelegateTaskTest.testGetCandidates.bpmn20.xml(String), null, null, false(Boolean), false(Boolean), 1(Integer), (String)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - <==    Updates: 1
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: DeploymentEntity[id=708, name=DelegateTaskTest.testGetCandidates]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==>  Preparing: insert into ACT_RE_DEPLOYMENT(ID_, NAME_, CATEGORY_, TENANT_ID_, DEPLOY_TIME_) values(?, ?, ?, ?, ?) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==> Parameters: 708(String), DelegateTaskTest.testGetCandidates(String), null, (String), 2023-03-20 10:45:10.813(Timestamp)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - <==    Updates: 1
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: ResourceEntity[id=709, name=org/activiti/engine/test/api/task/DelegateTaskTest.testGetCandidates.bpmn20.xml]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - ==>  Preparing: insert into ACT_GE_BYTEARRAY(ID_, REV_, NAME_, BYTES_, DEPLOYMENT_ID_, GENERATED_) values (?, 1, ?, ?, ?, ?) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - ==> Parameters: 709(String), org/activiti/engine/test/api/task/DelegateTaskTest.testGetCandidates.bpmn20.xml(String), java.io.ByteArrayInputStream@639d808a(ByteArrayInputStream), 708(String), false(Boolean)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - <==    Updates: 1
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,819 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 297240765 to pool.
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeployCmd finished --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - #### START DelegateTaskTest.testGetCandidates ###########################################################
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting StartProcessInstanceCmd --------------------------------------------------------
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,819 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 486346394 from pool.
+10:45:10,819 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: DelegateTaskTest.testGetCandidates(String), DelegateTaskTest.testGetCandidates(String)
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - initializing ProcessInstance[711]
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,819 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[711] executes Activity(theStart): org.activiti.engine.impl.bpmn.behavior.NoneStartEventActivityBehavior
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==>  Preparing: select * from ACT_RU_JOB J where J.EXECUTION_ID_ = ? 
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==> Parameters: 711(String)
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - <==      Total: 0
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'theStart'
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[711] takes transition (theStart)--flow1-->(task1)
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[711] executes Activity(task1): org.activiti.engine.impl.bpmn.behavior.UserTaskActivityBehavior
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - ==>  Preparing: select distinct T.* from ACT_RU_TASK T where T.EXECUTION_ID_ = ? 
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - ==> Parameters: 711(String)
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - <==      Total: 0
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting  --------------------------------------------------------
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'null'
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==>  Preparing: select * from ACT_PROCDEF_INFO where PROC_DEF_ID_ = ? 
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==> Parameters: DelegateTaskTest.testGetCandidates:1:710(String)
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - <==      Total: 0
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - ---  finished --------------------------------------------------------
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - ==>  Preparing: select * from ACT_RU_IDENTITYLINK where PROC_INST_ID_ = ? 
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - ==> Parameters: 711(String)
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - <==      Total: 0
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,820 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: AUDIT
+10:45:10,821 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByTaskId  - ==>  Preparing: select * from ACT_RU_VARIABLE where TASK_ID_ = ? 
+10:45:10,821 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByTaskId  - ==> Parameters: 714(String)
+10:45:10,821 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByTaskId  - <==      Total: 0
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ProcessInstance[711]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert VariableInstanceEntity[id=722, name=candidateUsers, type=serializable, byteArrayValueId=721]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert VariableInstanceEntity[id=727, name=candidateGroups, type=serializable, byteArrayValueId=726]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=721, name=var-candidateUsers, size=70]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=723, name=hist.var-candidateUsers, size=70]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=724, name=hist.detail.var-candidateUsers, size=70]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=726, name=var-candidateGroups, size=80]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=728, name=hist.var-candidateGroups, size=80]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ByteArrayEntity[id=729, name=hist.detail.var-candidateGroups, size=80]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricProcessInstanceEntity[superProcessInstanceId=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert Task[id=714, name=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricTaskInstanceEntity[id=714, name=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricDetailVariableInstanceUpdateEntity[id=725, name=candidateUsers, type=serializable, byteArrayValueId=724]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricDetailVariableInstanceUpdateEntity[id=730, name=candidateGroups, type=serializable, byteArrayValueId=729]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@30b5f974
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@37227aa7
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@57e2d15c
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@6810465
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@19e03398
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity@3d339541
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=715, type=candidate, groupId=management, taskId=714]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=716, type=candidate, groupId=accountancy, taskId=714]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=717, type=candidate, userId=gonzo, taskId=714]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=718, type=participant, userId=gonzo, processInstanceId=711]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=719, type=candidate, userId=kermit, taskId=714]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert IdentityLinkEntity[id=720, type=participant, userId=kermit, processInstanceId=711]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricActivityInstanceEntity[activityId=theStart, activityName=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricActivityInstanceEntity[activityId=task1, activityName=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricVariableInstanceEntity[id=722, name=candidateUsers, revision=0, type=serializable, byteArrayValueId=723]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert HistoricVariableInstanceEntity[id=727, name=candidateGroups, revision=0, type=serializable, byteArrayValueId=728]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 30 insert, 0 update, 0 delete.
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricDetailEntity.bulkInsertHistoricDetailVariableInstanceUpdate  - ==>  Preparing: insert into ACT_HI_DETAIL (ID_, TYPE_, PROC_INST_ID_, EXECUTION_ID_, ACT_INST_ID_, TASK_ID_, NAME_, REV_, VAR_TYPE_, TIME_, BYTEARRAY_ID_, DOUBLE_, LONG_ , TEXT_, TEXT2_) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricDetailEntity.bulkInsertHistoricDetailVariableInstanceUpdate  - ==> Parameters: 725(String), VariableUpdate(String), 711(String), 711(String), 713(String), null, candidateUsers(String), 0(Integer), serializable(String), 2023-03-20 10:45:10.822(Timestamp), 724(String), null, null, null, null, 730(String), VariableUpdate(String), 711(String), 711(String), 713(String), null, candidateGroups(String), 0(Integer), serializable(String), 2023-03-20 10:45:10.822(Timestamp), 729(String), null, null, null, null
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricDetailEntity.bulkInsertHistoricDetailVariableInstanceUpdate  - <==    Updates: 2
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricVariableInstanceEntity.bulkInsertHistoricVariableInstance  - ==>  Preparing: insert into ACT_HI_VARINST (ID_, PROC_INST_ID_, EXECUTION_ID_, TASK_ID_, NAME_, REV_, VAR_TYPE_, BYTEARRAY_ID_, DOUBLE_, LONG_ , TEXT_, TEXT2_, CREATE_TIME_, LAST_UPDATED_TIME_) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricVariableInstanceEntity.bulkInsertHistoricVariableInstance  - ==> Parameters: 722(String), 711(String), 711(String), null, candidateUsers(String), 0(Integer), serializable(String), 723(String), null, null, null, null, 2023-03-20 10:45:10.822(Timestamp), 2023-03-20 10:45:10.822(Timestamp), 727(String), 711(String), 711(String), null, candidateGroups(String), 0(Integer), serializable(String), 728(String), null, null, null, null, 2023-03-20 10:45:10.822(Timestamp), 2023-03-20 10:45:10.822(Timestamp)
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricVariableInstanceEntity.bulkInsertHistoricVariableInstance  - <==    Updates: 2
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: HistoricTaskInstanceEntity[id=714, name=null]
+10:45:10,822 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricTaskInstanceEntity.insertHistoricTaskInstance  - ==>  Preparing: insert into ACT_HI_TASKINST ( ID_, PROC_DEF_ID_, PROC_INST_ID_, EXECUTION_ID_, NAME_, PARENT_TASK_ID_, DESCRIPTION_, OWNER_, ASSIGNEE_, START_TIME_, CLAIM_TIME_, END_TIME_, DURATION_, DELETE_REASON_, TASK_DEF_KEY_, FORM_KEY_, PRIORITY_, DUE_DATE_, CATEGORY_, TENANT_ID_ ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricTaskInstanceEntity.insertHistoricTaskInstance  - ==> Parameters: 714(String), DelegateTaskTest.testGetCandidates:1:710(String), 711(String), 711(String), null, null, null, null, null, 2023-03-20 10:45:10.82(Timestamp), null, null, null, null, task1(String), null, 50(Integer), null, null, (String)
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricTaskInstanceEntity.insertHistoricTaskInstance  - <==    Updates: 1
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: HistoricProcessInstanceEntity[superProcessInstanceId=null]
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.insertHistoricProcessInstance  - ==>  Preparing: insert into ACT_HI_PROCINST ( ID_, PROC_INST_ID_, BUSINESS_KEY_, PROC_DEF_ID_, START_TIME_, END_TIME_, DURATION_, START_USER_ID_, START_ACT_ID_, END_ACT_ID_, SUPER_PROCESS_INSTANCE_ID_, DELETE_REASON_, TENANT_ID_, NAME_ ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.insertHistoricProcessInstance  - ==> Parameters: 711(String), 711(String), null, DelegateTaskTest.testGetCandidates:1:710(String), 2023-03-20 10:45:10.819(Timestamp), null, null, null, theStart(String), null, null, null, (String), null
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.insertHistoricProcessInstance  - <==    Updates: 1
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.bulkInsertHistoricActivityInstance  - ==>  Preparing: insert into ACT_HI_ACTINST ( ID_, PROC_DEF_ID_, PROC_INST_ID_, EXECUTION_ID_, ACT_ID_, TASK_ID_, CALL_PROC_INST_ID_, ACT_NAME_, ACT_TYPE_, ASSIGNEE_, START_TIME_, END_TIME_, DURATION_, TENANT_ID_ ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.bulkInsertHistoricActivityInstance  - ==> Parameters: 712(String), DelegateTaskTest.testGetCandidates:1:710(String), 711(String), 711(String), theStart(String), null, null, null, startEvent(String), null, 2023-03-20 10:45:10.819(Timestamp), 2023-03-20 10:45:10.82(Timestamp), 1(Long), (String), 713(String), DelegateTaskTest.testGetCandidates:1:710(String), 711(String), 711(String), task1(String), 714(String), null, null, userTask(String), null, 2023-03-20 10:45:10.82(Timestamp), null, null, (String)
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.bulkInsertHistoricActivityInstance  - <==    Updates: 2
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity.bulkInsertHistoricIdentityLink  - ==>  Preparing: insert into ACT_HI_IDENTITYLINK (ID_, TYPE_, USER_ID_, GROUP_ID_, TASK_ID_, PROC_INST_ID_) values (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) , (?, ?, ?, ?, ?, ?) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity.bulkInsertHistoricIdentityLink  - ==> Parameters: 715(String), candidate(String), null, management(String), 714(String), null, 716(String), candidate(String), null, accountancy(String), 714(String), null, 717(String), candidate(String), gonzo(String), null, 714(String), null, 718(String), participant(String), gonzo(String), null, null, 711(String), 719(String), candidate(String), kermit(String), null, 714(String), null, 720(String), participant(String), kermit(String), null, null, 711(String)
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricIdentityLinkEntity.bulkInsertHistoricIdentityLink  - <==    Updates: 6
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: ProcessInstance[711]
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution  - ==>  Preparing: insert into ACT_RU_EXECUTION (ID_, REV_, PROC_INST_ID_, BUSINESS_KEY_, PROC_DEF_ID_, ACT_ID_, IS_ACTIVE_, IS_CONCURRENT_, IS_SCOPE_,IS_EVENT_SCOPE_, PARENT_ID_, SUPER_EXEC_, SUSPENSION_STATE_, CACHED_ENT_STATE_, TENANT_ID_, NAME_) values ( ?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution  - ==> Parameters: 711(String), 711(String), null, DelegateTaskTest.testGetCandidates:1:710(String), task1(String), true(Boolean), false(Boolean), true(Boolean), false(Boolean), null, null, 1(Integer), 2(Integer), (String), null
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution  - <==    Updates: 1
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: Task[id=714, name=null]
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.insertTask  - ==>  Preparing: insert into ACT_RU_TASK (ID_, REV_, NAME_, PARENT_TASK_ID_, DESCRIPTION_, PRIORITY_, CREATE_TIME_, OWNER_, ASSIGNEE_, DELEGATION_, EXECUTION_ID_, PROC_INST_ID_, PROC_DEF_ID_, TASK_DEF_KEY_, DUE_DATE_, CATEGORY_, SUSPENSION_STATE_, TENANT_ID_, FORM_KEY_) values (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.insertTask  - ==> Parameters: 714(String), null, null, null, 50(Integer), 2023-03-20 10:45:10.82(Timestamp), null, null, null, 711(String), 711(String), DelegateTaskTest.testGetCandidates:1:710(String), task1(String), null, null, 1(Integer), (String), null
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.insertTask  - <==    Updates: 1
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.bulkInsertIdentityLink  - ==>  Preparing: insert into ACT_RU_IDENTITYLINK (ID_, REV_, TYPE_, USER_ID_, GROUP_ID_, TASK_ID_, PROC_INST_ID_, PROC_DEF_ID_) values (?, 1, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.bulkInsertIdentityLink  - ==> Parameters: 715(String), candidate(String), null, management(String), 714(String), null, null, 716(String), candidate(String), null, accountancy(String), 714(String), null, null, 717(String), candidate(String), gonzo(String), null, 714(String), null, null, 718(String), participant(String), gonzo(String), null, null, 711(String), null, 719(String), candidate(String), kermit(String), null, 714(String), null, null, 720(String), participant(String), kermit(String), null, null, 711(String), null
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.bulkInsertIdentityLink  - <==    Updates: 6
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ByteArrayEntity.bulkInsertByteArray  - ==>  Preparing: insert into ACT_GE_BYTEARRAY(ID_, REV_, NAME_, BYTES_, DEPLOYMENT_ID_) values (?, 1, ?, ?, ?) , (?, 1, ?, ?, ?) , (?, 1, ?, ?, ?) , (?, 1, ?, ?, ?) , (?, 1, ?, ?, ?) , (?, 1, ?, ?, ?) 
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ByteArrayEntity.bulkInsertByteArray  - ==> Parameters: 721(String), var-candidateUsers(String), java.io.ByteArrayInputStream@7c1adb8a(ByteArrayInputStream), null, 723(String), hist.var-candidateUsers(String), java.io.ByteArrayInputStream@72364a40(ByteArrayInputStream), null, 724(String), hist.detail.var-candidateUsers(String), java.io.ByteArrayInputStream@6ad2cb6d(ByteArrayInputStream), null, 726(String), var-candidateGroups(String), java.io.ByteArrayInputStream@4b6ad2eb(ByteArrayInputStream), null, 728(String), hist.var-candidateGroups(String), java.io.ByteArrayInputStream@61868687(ByteArrayInputStream), null, 729(String), hist.detail.var-candidateGroups(String), java.io.ByteArrayInputStream@2122b4bd(ByteArrayInputStream), null
+10:45:10,823 [main] DEBUG org.activiti.engine.impl.persistence.entity.ByteArrayEntity.bulkInsertByteArray  - <==    Updates: 6
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.bulkInsertVariableInstance  - ==>  Preparing: INSERT INTO ACT_RU_VARIABLE (ID_, REV_, TYPE_, NAME_, PROC_INST_ID_, EXECUTION_ID_, TASK_ID_, BYTEARRAY_ID_, DOUBLE_, LONG_ , TEXT_, TEXT2_) VALUES (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.bulkInsertVariableInstance  - ==> Parameters: 722(String), serializable(String), candidateUsers(String), 711(String), 711(String), null, 721(String), null, null, null, null, 727(String), serializable(String), candidateGroups(String), 711(String), 711(String), null, 726(String), null, null, null, null
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.bulkInsertVariableInstance  - <==    Updates: 2
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 486346394 to pool.
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- StartProcessInstanceCmd finished --------------------------------------------------------
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting TaskQueryImpl --------------------------------------------------------
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,824 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 180014677 from pool.
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria  - ==>  Preparing: select distinct RES.* from ACT_RU_TASK RES order by order by RES.ID_ asc LIMIT ? OFFSET ? 
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/Task.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria
+### The error occurred while executing a query
+### SQL: select distinct RES.*              from ACT_RU_TASK RES                                                                     order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.persistence.entity.TaskEntityManager.findTasksByQueryCriteria(TaskEntityManager.java:135)
+	at org.activiti.engine.impl.TaskQueryImpl.executeList(TaskQueryImpl.java:1256)
+	at org.activiti.engine.impl.AbstractQuery.executeSingleResult(AbstractQuery.java:183)
+	at org.activiti.engine.impl.AbstractQuery.execute(AbstractQuery.java:166)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.AbstractQuery.singleResult(AbstractQuery.java:129)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testGetCandidates(DelegateTaskTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 41 more
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolling back...
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - rolling back ibatis sql session...
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolled back...
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,824 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 180014677 to pool.
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- TaskQueryImpl finished --------------------------------------------------------
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,824 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,824 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - EXCEPTION: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/Task.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria
+### The error occurred while executing a query
+### SQL: select distinct RES.*              from ACT_RU_TASK RES                                                                     order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/Task.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria
+### The error occurred while executing a query
+### SQL: select distinct RES.*              from ACT_RU_TASK RES                                                                     order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.persistence.entity.TaskEntityManager.findTasksByQueryCriteria(TaskEntityManager.java:135)
+	at org.activiti.engine.impl.TaskQueryImpl.executeList(TaskQueryImpl.java:1256)
+	at org.activiti.engine.impl.AbstractQuery.executeSingleResult(AbstractQuery.java:183)
+	at org.activiti.engine.impl.AbstractQuery.execute(AbstractQuery.java:166)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.AbstractQuery.singleResult(AbstractQuery.java:129)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testGetCandidates(DelegateTaskTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 41 more
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - #### END DelegateTaskTest.testGetCandidates #############################################################
+10:45:10,824 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,824 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - EXCEPTION: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/Task.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria
+### The error occurred while executing a query
+### SQL: select distinct RES.*              from ACT_RU_TASK RES                                                                     order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/Task.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TaskEntity.selectTaskByQueryCriteria
+### The error occurred while executing a query
+### SQL: select distinct RES.*              from ACT_RU_TASK RES                                                                     order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.persistence.entity.TaskEntityManager.findTasksByQueryCriteria(TaskEntityManager.java:135)
+	at org.activiti.engine.impl.TaskQueryImpl.executeList(TaskQueryImpl.java:1256)
+	at org.activiti.engine.impl.AbstractQuery.executeSingleResult(AbstractQuery.java:183)
+	at org.activiti.engine.impl.AbstractQuery.execute(AbstractQuery.java:166)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.AbstractQuery.singleResult(AbstractQuery.java:129)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testGetCandidates(DelegateTaskTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DISTINCT RES.* 
+       
+    FROM ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select distinct RES.* 
+       
+    from ACT_RU_TASK RES
+     
+     
+     
+     
+    
+     
+     
+     
+      
+   
+    
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 41 more
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment deletes deployment for DelegateTaskTest.testGetCandidates
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,824 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeleteDeploymentCmd --------------------------------------------------------
+10:45:10,824 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,825 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 363509958 from pool.
+10:45:10,825 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn2: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==>  Preparing: select * from ACT_RE_DEPLOYMENT where ID_ = ? 
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==> Parameters: 708(String)
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - <==      Total: 1
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==>  Preparing: select RES.* from ACT_RE_PROCDEF RES WHERE RES.DEPLOYMENT_ID_ = ? order by order by RES.ID_ asc LIMIT ? OFFSET ? 
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/ProcessDefinition.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*              from ACT_RE_PROCDEF RES            WHERE  RES.DEPLOYMENT_ID_ = ?           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:419)
+	at org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntityManager.findProcessDefinitionsByQueryCriteria(ProcessDefinitionEntityManager.java:57)
+	at org.activiti.engine.impl.ProcessDefinitionQueryImpl.executeList(ProcessDefinitionQueryImpl.java:307)
+	at org.activiti.engine.impl.AbstractQuery.list(AbstractQuery.java:140)
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.removeDeployment(DeploymentManager.java:187)
+	at org.activiti.engine.impl.cmd.DeleteDeploymentCmd.execute(DeleteDeploymentCmd.java:44)
+	at org.activiti.engine.impl.cmd.DeleteDeploymentCmd.execute(DeleteDeploymentCmd.java:24)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deleteDeployment(RepositoryServiceImpl.java:90)
+	at org.activiti.engine.impl.test.TestHelper.annotationDeploymentTearDown(TestHelper.java:116)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:116)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 37 more
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolling back...
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - rolling back ibatis sql session...
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolled back...
+10:45:10,825 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn2: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,825 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn2: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,825 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 363509958 to pool.
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeleteDeploymentCmd finished --------------------------------------------------------
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,825 [main] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment creates deployment for DelegateTaskTest.testChangeCategoryInDelegateTask
+10:45:10,826 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,826 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeployCmd --------------------------------------------------------
+10:45:10,826 [main] DEBUG org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing deployment DelegateTaskTest.testChangeCategoryInDelegateTask
+10:45:10,826 [main] INFO  org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing resource org/activiti/engine/test/api/task/DelegateTaskTest.testChangeCategoryInDelegateTask.bpmn20.xml
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.ProcessParseHandler  - Parsing process delegateTaskTest
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity approvalTask
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity startevent1
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity theEnd
+10:45:10,831 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,831 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 297240765 from pool.
+10:45:10,831 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: delegateTaskTest(String), delegateTaskTest(String)
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 0
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==>  Preparing: select J.* from ACT_RU_JOB J inner join ACT_RE_PROCDEF P on J.PROC_DEF_ID_ = P.ID_ where J.HANDLER_TYPE_ = ? and P.KEY_ = ? and (P.TENANT_ID_ = '' or P.TENANT_ID_ is null) 
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==> Parameters: timer-start-event(String), delegateTaskTest(String)
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - <==      Total: 0
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==>  Preparing: select * from ACT_PROCDEF_INFO where PROC_DEF_ID_ = ? 
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==> Parameters: delegateTaskTest:1:733(String)
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - <==      Total: 0
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting GetProcessDefinitionInfoCmd --------------------------------------------------------
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'org.activiti.engine.impl.cmd.GetProcessDefinitionInfoCmd'
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting  --------------------------------------------------------
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'null'
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - ---  finished --------------------------------------------------------
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- GetProcessDefinitionInfoCmd finished --------------------------------------------------------
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,831 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=732, name=org/activiti/engine/test/api/task/DelegateTaskTest.testChangeCategoryInDelegateTask.bpmn20.xml]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert DeploymentEntity[id=731, name=DelegateTaskTest.testChangeCategoryInDelegateTask]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ProcessDefinitionEntity[delegateTaskTest:1:733]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 3 insert, 0 update, 0 delete.
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: ProcessDefinitionEntity[delegateTaskTest:1:733]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - ==>  Preparing: insert into ACT_RE_PROCDEF(ID_, REV_, CATEGORY_, NAME_, KEY_, VERSION_, DEPLOYMENT_ID_, RESOURCE_NAME_, DGRM_RESOURCE_NAME_, DESCRIPTION_, HAS_START_FORM_KEY_, HAS_GRAPHICAL_NOTATION_ , SUSPENSION_STATE_, TENANT_ID_) values (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - ==> Parameters: delegateTaskTest:1:733(String), http://www.activiti.org/test(String), null, delegateTaskTest(String), 1(Integer), 731(String), org/activiti/engine/test/api/task/DelegateTaskTest.testChangeCategoryInDelegateTask.bpmn20.xml(String), null, null, false(Boolean), false(Boolean), 1(Integer), (String)
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.insertProcessDefinition  - <==    Updates: 1
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: DeploymentEntity[id=731, name=DelegateTaskTest.testChangeCategoryInDelegateTask]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==>  Preparing: insert into ACT_RE_DEPLOYMENT(ID_, NAME_, CATEGORY_, TENANT_ID_, DEPLOY_TIME_) values(?, ?, ?, ?, ?) 
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==> Parameters: 731(String), DelegateTaskTest.testChangeCategoryInDelegateTask(String), null, (String), 2023-03-20 10:45:10.826(Timestamp)
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - <==    Updates: 1
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: ResourceEntity[id=732, name=org/activiti/engine/test/api/task/DelegateTaskTest.testChangeCategoryInDelegateTask.bpmn20.xml]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - ==>  Preparing: insert into ACT_GE_BYTEARRAY(ID_, REV_, NAME_, BYTES_, DEPLOYMENT_ID_, GENERATED_) values (?, 1, ?, ?, ?, ?) 
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - ==> Parameters: 732(String), org/activiti/engine/test/api/task/DelegateTaskTest.testChangeCategoryInDelegateTask.bpmn20.xml(String), java.io.ByteArrayInputStream@5d51203b(ByteArrayInputStream), 731(String), false(Boolean)
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.insertResource  - <==    Updates: 1
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+10:45:10,832 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+10:45:10,832 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,832 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn4: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,832 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 297240765 to pool.
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeployCmd finished --------------------------------------------------------
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - #### START DelegateTaskTest.testChangeCategoryInDelegateTask ###########################################################
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting StartProcessInstanceCmd --------------------------------------------------------
+10:45:10,832 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,832 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 486346394 from pool.
+10:45:10,832 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: delegateTaskTest(String), delegateTaskTest(String)
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - initializing ProcessInstance[734]
+10:45:10,832 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[734] executes Activity(startevent1): org.activiti.engine.impl.bpmn.behavior.NoneStartEventActivityBehavior
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==>  Preparing: select * from ACT_RU_JOB J where J.EXECUTION_ID_ = ? 
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==> Parameters: 734(String)
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - <==      Total: 0
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'startevent1'
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[734] takes transition (startevent1)--flow1-->(approvalTask)
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - Child execution ScopeExecution[741] created with parent 
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope  - create scope: parent ProcessInstance[734] continues as execution ScopeExecution[741]
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - initializing ScopeExecution[741]
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,833 [main] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ScopeExecution[741] executes Activity(approvalTask): org.activiti.engine.impl.bpmn.behavior.ParallelMultiInstanceBehavior
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - Child execution ScopeExecution[749] created with parent 
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior  - Multi-instance 'Activity(approvalTask)' initialized. Details: loopCounter=0, nrOrCompletedInstances=0,nrOfActiveInstances=1,nrOfInstances=1
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByExecutionId  - ==>  Preparing: select * from ACT_RU_VARIABLE where EXECUTION_ID_ = ? and TASK_ID_ is null 
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByExecutionId  - ==> Parameters: 749(String)
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.persistence.entity.VariableInstanceEntity.selectVariablesByExecutionId  - <==      Total: 0
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: ACTIVITY
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: FULL, level required: FULL
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria  - ==>  Preparing: select RES.* from ACT_HI_ACTINST RES WHERE RES.EXECUTION_ID_ = ? and RES.ACT_ID_ = ? and RES.END_TIME_ is null order by order by RES.ID_ asc LIMIT ? OFFSET ? 
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/HistoricActivityInstance.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*            from ACT_HI_ACTINST RES      WHERE  RES.EXECUTION_ID_ = ?                              and RES.ACT_ID_ = ?                                                                 and RES.END_TIME_ is null           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:419)
+	at org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntityManager.findHistoricActivityInstancesByQueryCriteria(HistoricActivityInstanceEntityManager.java:56)
+	at org.activiti.engine.impl.HistoricActivityInstanceQueryImpl.executeList(HistoricActivityInstanceQueryImpl.java:70)
+	at org.activiti.engine.impl.AbstractQuery.listPage(AbstractQuery.java:151)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.findActivityInstance(DefaultHistoryManager.java:355)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.recordHistoricDetailVariableCreate(DefaultHistoryManager.java:659)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableInstance(VariableScopeImpl.java:710)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.createVariableInstance(ExecutionEntity.java:1174)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:610)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:597)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:566)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:533)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.setLoopVariable(MultiInstanceActivityBehavior.java:226)
+	at org.activiti.engine.impl.bpmn.behavior.ParallelMultiInstanceBehavior.createInstances(ParallelMultiInstanceBehavior.java:81)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.execute(MultiInstanceActivityBehavior.java:92)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:453)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:431)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStartInitial.eventNotificationsCompleted(AtomicOperationProcessStartInitial.java:45)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStart.eventNotificationsCompleted(AtomicOperationProcessStart.java:64)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:381)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:110)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:77)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testChangeCategoryInDelegateTask(DelegateTaskTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 109 more
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolling back...
+10:45:10,834 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - rolling back ibatis sql session...
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolled back...
+10:45:10,835 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,835 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn6: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,835 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 486346394 to pool.
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- StartProcessInstanceCmd finished --------------------------------------------------------
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,835 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,835 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - EXCEPTION: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/HistoricActivityInstance.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*            from ACT_HI_ACTINST RES      WHERE  RES.EXECUTION_ID_ = ?                              and RES.ACT_ID_ = ?                                                                 and RES.END_TIME_ is null           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/HistoricActivityInstance.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*            from ACT_HI_ACTINST RES      WHERE  RES.EXECUTION_ID_ = ?                              and RES.ACT_ID_ = ?                                                                 and RES.END_TIME_ is null           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:419)
+	at org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntityManager.findHistoricActivityInstancesByQueryCriteria(HistoricActivityInstanceEntityManager.java:56)
+	at org.activiti.engine.impl.HistoricActivityInstanceQueryImpl.executeList(HistoricActivityInstanceQueryImpl.java:70)
+	at org.activiti.engine.impl.AbstractQuery.listPage(AbstractQuery.java:151)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.findActivityInstance(DefaultHistoryManager.java:355)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.recordHistoricDetailVariableCreate(DefaultHistoryManager.java:659)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableInstance(VariableScopeImpl.java:710)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.createVariableInstance(ExecutionEntity.java:1174)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:610)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:597)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:566)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:533)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.setLoopVariable(MultiInstanceActivityBehavior.java:226)
+	at org.activiti.engine.impl.bpmn.behavior.ParallelMultiInstanceBehavior.createInstances(ParallelMultiInstanceBehavior.java:81)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.execute(MultiInstanceActivityBehavior.java:92)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:453)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:431)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStartInitial.eventNotificationsCompleted(AtomicOperationProcessStartInitial.java:45)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStart.eventNotificationsCompleted(AtomicOperationProcessStart.java:64)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:381)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:110)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:77)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testChangeCategoryInDelegateTask(DelegateTaskTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 109 more
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.test.PvmTestCase  - #### END DelegateTaskTest.testChangeCategoryInDelegateTask #############################################################
+10:45:10,835 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - 
+
+10:45:10,835 [main] ERROR org.activiti.engine.impl.test.PvmTestCase  - EXCEPTION: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/HistoricActivityInstance.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*            from ACT_HI_ACTINST RES      WHERE  RES.EXECUTION_ID_ = ?                              and RES.ACT_ID_ = ?                                                                 and RES.END_TIME_ is null           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/HistoricActivityInstance.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity.selectHistoricActivityInstancesByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*            from ACT_HI_ACTINST RES      WHERE  RES.EXECUTION_ID_ = ?                              and RES.ACT_ID_ = ?                                                                 and RES.END_TIME_ is null           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:419)
+	at org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntityManager.findHistoricActivityInstancesByQueryCriteria(HistoricActivityInstanceEntityManager.java:56)
+	at org.activiti.engine.impl.HistoricActivityInstanceQueryImpl.executeList(HistoricActivityInstanceQueryImpl.java:70)
+	at org.activiti.engine.impl.AbstractQuery.listPage(AbstractQuery.java:151)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.findActivityInstance(DefaultHistoryManager.java:355)
+	at org.activiti.engine.impl.history.DefaultHistoryManager.recordHistoricDetailVariableCreate(DefaultHistoryManager.java:659)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableInstance(VariableScopeImpl.java:710)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.createVariableInstance(ExecutionEntity.java:1174)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:610)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.createVariableLocal(VariableScopeImpl.java:597)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:566)
+	at org.activiti.engine.impl.persistence.entity.VariableScopeImpl.setVariableLocal(VariableScopeImpl.java:533)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.setLoopVariable(MultiInstanceActivityBehavior.java:226)
+	at org.activiti.engine.impl.bpmn.behavior.ParallelMultiInstanceBehavior.createInstances(ParallelMultiInstanceBehavior.java:81)
+	at org.activiti.engine.impl.bpmn.behavior.MultiInstanceActivityBehavior.execute(MultiInstanceActivityBehavior.java:92)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:453)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:431)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStartInitial.eventNotificationsCompleted(AtomicOperationProcessStartInitial.java:45)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStart.eventNotificationsCompleted(AtomicOperationProcessStart.java:64)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:636)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:629)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:381)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:110)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:77)
+	at org.activiti.engine.test.api.task.DelegateTaskTest.testChangeCategoryInDelegateTask(DelegateTaskTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at org.activiti.engine.impl.test.PvmTestCase.runTest(PvmTestCase.java:65)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:100)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+     
+    FROM ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        AND RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        AND RES.END_TIME_ IS NULL 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+     
+    from ACT_HI_ACTINST RES
+     WHERE  RES.EXECUTION_ID_ = ?
+      
+      
+      
+        and RES.ACT_ID_ = ?
+      
+      
+      
+      
+      
+      
+      
+      
+        and RES.END_TIME_ is null 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 109 more
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment deletes deployment for DelegateTaskTest.testChangeCategoryInDelegateTask
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeleteDeploymentCmd --------------------------------------------------------
+10:45:10,835 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+10:45:10,835 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 180014677 from pool.
+10:45:10,835 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==>  Preparing: select * from ACT_RE_DEPLOYMENT where ID_ = ? 
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==> Parameters: 731(String)
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - <==      Total: 1
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==>  Preparing: select RES.* from ACT_RE_PROCDEF RES WHERE RES.DEPLOYMENT_ID_ = ? order by order by RES.ID_ asc LIMIT ? OFFSET ? 
+10:45:10,835 [main] DEBUG org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+### The error may exist in org/activiti/db/mapping/entity/ProcessDefinition.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria
+### The error occurred while executing a query
+### SQL: select RES.*              from ACT_RE_PROCDEF RES            WHERE  RES.DEPLOYMENT_ID_ = ?           order by  order by RES.ID_ asc       LIMIT ? OFFSET ?
+### Cause: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:438)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:429)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:419)
+	at org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntityManager.findProcessDefinitionsByQueryCriteria(ProcessDefinitionEntityManager.java:57)
+	at org.activiti.engine.impl.ProcessDefinitionQueryImpl.executeList(ProcessDefinitionQueryImpl.java:307)
+	at org.activiti.engine.impl.AbstractQuery.list(AbstractQuery.java:140)
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.removeDeployment(DeploymentManager.java:187)
+	at org.activiti.engine.impl.cmd.DeleteDeploymentCmd.execute(DeleteDeploymentCmd.java:44)
+	at org.activiti.engine.impl.cmd.DeleteDeploymentCmd.execute(DeleteDeploymentCmd.java:24)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deleteDeployment(RepositoryServiceImpl.java:90)
+	at org.activiti.engine.impl.test.TestHelper.annotationDeploymentTearDown(TestHelper.java:116)
+	at org.activiti.engine.impl.test.AbstractActivitiTestCase.runBare(AbstractActivitiTestCase.java:116)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:255)
+	at junit.framework.TestSuite.run(TestSuite.java:250)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:84)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT RES.* 
+       
+    FROM ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     ORDER BY  ORDER[*] BY RES.ID_ ASC  
+    LIMIT ? OFFSET ? "; expected "=, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+select RES.* 
+       
+    from ACT_RE_PROCDEF RES
+     
+     WHERE  RES.DEPLOYMENT_ID_ = ? 
+   
+     order by  order by RES.ID_ asc  
+    LIMIT ? OFFSET ? [42001-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:204)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:524)
+	at org.h2.command.Parser.readTerm(Parser.java:2688)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseEndOfQuery(Parser.java:1726)
+	at org.h2.command.Parser.parseSelectUnionExtension(Parser.java:1706)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1675)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:282)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:245)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:55)
+	at com.sun.proxy.$Proxy12.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 37 more
+10:45:10,836 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolling back...
+10:45:10,836 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - rolling back ibatis sql session...
+10:45:10,836 [main] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolled back...
+10:45:10,836 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,836 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn3: url=jdbc:h2:mem:activiti user=SA]
+10:45:10,836 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 180014677 to pool.
+10:45:10,836 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeleteDeploymentCmd finished --------------------------------------------------------
+10:45:10,836 [main] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+

@@ -1,0 +1,7 @@
+#surefire
+#Mon Mar 20 10:44:44 CST 2023
+user.dir=D\:\\xinchuang\\activiti-engine-5.19.0.2
+maven.repo.local=D\:\\Program Files\\apache-maven-3.6.1\\shanxi
+idea.version=2022.3.1
+localRepository=D\:\\Program Files\\apache-maven-3.6.1\\shanxi
+basedir=D\:\\xinchuang\\activiti-engine-5.19.0.2
